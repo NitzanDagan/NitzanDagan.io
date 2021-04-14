@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title> Purchase Water</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="Script.js"></script>
+</head>
+
+<body>
+    <header> <h1 class="primary-header">Purchase Water</h1></header>
+    
+    <div class="container">
+        <div class="card-row">
+            <div class="card col-1-of-3">
+                <img class="bottle" src="img/bottle6.png" />
+                <h2 class="card-header">6 BOTTLE PACK</h2>
+                <p class="card-price">$2.5 / pack </p>
+                <p class="btns">
+                    <input type="button" value="-" onclick="calc(false, 1)" class="card-btn" />
+                    <button class="card-quantity" id="spn1">0</button>
+                    <input type="button" value="+" onclick="calc(true, 1)" class="card-btn" />
+                </p>
+            </div>
+       
+            <div class="card col-1-of-3">
+                <img class="bottle" src="img/bottle12.png" />
+                <h2 class="card-header">12 BOTTLE PACK</h2>
+                <p class="card-price">$4.66 / pack </p>
+                <p class="btns">
+                    <input type="button" value="-" onclick="calc(false, 2)" class="card-btn" />
+                    <button class="card-quantity" id="spn2">0</button>
+                    <input type="button" value="+" onclick="calc(true, 2)" class="card-btn" />
+                </p>
+            </div>
+
+            <div class="card col-1-of-3">
+                <img class="bottle" src="img/bottle24.png" />
+                <h2 class="card-header">24 BOTTLE PACK</h2>
+                <p class="card-price">$9 / pack </p>
+                <p class="btns">
+                    <input type="button" value="-" onclick="calc(false, 3)" class="card-btn" />
+                    <button class="card-quantity" id="spn3">0</button>
+                    <input type="button" value="+" onclick="calc(true, 3)" class="card-btn" />
+                </p>
+            </div>
+        </div>
+
+        <div class="row billing-row">
+            <div class="col-1-of-2" id="img">
+                <img class="woman-img" src="img/woman.png" />
+            </div>
+            <div class="col-1-of-2" id="form">
+                <form name="billing_form" method="post" id="billing-form" class="billing-form">
+                    <h1 class="billing-info">Billing Info</h1>   
+                        <div class="form_group">
+                            <label class="billing-label" for="first_name">First Name</label>
+                            <input type="text" name="first_name" id="first_name" class="billing-input" required pattern="[A-Za-z]{2,70}"/>
+                            <p id="firstname-error-message"></p>
+                        </div>
+                        <div class="form_group">
+                            <label class="billing-label" for="last_name">Last Name</label>
+                            <input type="text" name="last_name" value="" id="last_name" class="billing-input" required pattern="[A-Za-z]{2,70}" />
+                            <p id="lastname-error-message"></p>
+                        </div>
+                        <div class="form_group">
+                            <label class="billing-label" for="email">Email Address</label>
+                            <input type="email" name="email" value="" id="email" class="billing-input" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+                            <p id="email-error-message"></p>  
+                        </div>
+          
+                    <table class="summary">
+                        <tr class="th summary-sm">
+                            <th> Packs</th>
+                            <th> Quantity</th>
+                            <th> Price</th>
+                        </tr>
+                        <tr id="row1">
+                            <td class="billing-update">6 BOTTLE PACK</td>
+                            <td class="pack-quantity summary-sm"><span id="total6-sm"></span></td>
+                            <td class="pack-quantity summary-bg">Packs quantity</td>
+                            <td class="price summary-sm">$<span id="price6"></span></td>
+                            <td class="price summary-bg"><button class="card-quantity" id="total6-bg">0</button></td>
+                        </tr>
+
+                        <tr id="row2">
+                            <td class="billing-update">12 BOTTLE PACK</td>
+                            <td class="pack-quantity summary-sm"><span id="total12-sm"></span></td>
+                            <td class="pack-quantity summary-bg">Packs quantity</td>
+                            <td class="price summary-sm">$<span id="price12"></span></td>
+                            <td class="price summary-bg"><button class="card-quantity" id="total12-bg">0</button></td>
+                        </tr>
+                        <tr id="row3">
+                            <td class="billing-update">24 BOTTLE PACK</td>
+                            <td class="pack-quantity summary-sm"><span id="total24-sm"></span></td>
+                            <td class="pack-quantity summary-bg">Packs quantity</td>
+                            <td class="price summary-sm">$<span id="price24"></span></td>
+                            <td class="price summary-bg"><button class="card-quantity" id="total24-bg">0</button></td>
+                        </tr>
+                    </table>
+
+                        <hr class="vector" />
+                        <h2>Your Total $<span id="spnAll"> 0 </span></h2>
+
+                    <input class="btn-checkout" type="button" name="checkout" value="checkout" id="checkout" onclick="if (validationform()) return modal();" />               
+                    <input type="reset" class="btn-reset" value="To start over click here" onclick="sessionStorage.clear()"/>
+                </form>
+            </div>
+        </div>
+
+        <div id="popup-modal" class="popup-modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="bill"id="message"></div>
+            </div>
+        </div>
+    </div>
+
+</body >
+</html>
+
+
+
+

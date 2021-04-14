@@ -1,0 +1,390 @@
+﻿/*PAGE*/
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.container {
+    width: 98vw;
+    height: 98vh;
+    background: #F5FBFF;
+    margin: auto;
+    box-sizing: border-box;
+    padding:20px;
+}
+
+.primary-header {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 90px;
+    text-align: center;
+    color: #4955F5;
+    margin: 50px;
+
+}
+
+/*CARDS*/
+
+.card-row {
+    display: flex;
+    justify-content: space-evenly;
+}
+.card {
+    height: 300px;
+    width:30%;
+    padding: 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 18px rgba(73, 85, 245, 0.33);
+    border-radius: 12px;
+}
+
+.card-header {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 20px;
+    text-align: center;
+    color: #4955F5;
+    margin: 15px auto;
+    width: 80%;
+}
+
+.btns{
+    text-align:center;
+    margin-top:20px;
+}
+
+.card-btn {
+    font-family: Roboto;
+    height:30px;
+    width:30px;
+    text-align:center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    color: #ffffff;
+    background: #4955F5;
+    border: 1px solid #4955F5;
+    box-sizing: border-box;
+    border-radius: 5px;    
+}
+
+.card-btn:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.card-quantity {
+    width: 30px;
+    height: 30px;
+    font-size:15px;
+    background: #FFFFFF;
+    border: 1px solid #4955F5;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.card-price {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    color: #4955F5;
+    width: 70%;
+    margin: auto;
+}
+
+/*FORM*/
+
+.billing-row {
+    padding: 40px 50px 50px 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    width:100%;
+    margin-top:15px;
+    display:inline-block;
+}
+
+.woman-img {
+    display:block;
+    margin: auto;
+    width: 60%;
+    height:300px;
+    margin-top:10px;
+}
+
+
+.billing-form{
+    float:left;
+    display:inline;
+}
+
+.billing-info {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 45px;
+    color: #4955F5;
+    margin-bottom:10px;
+}
+
+.billing-label {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    color: #4955F5;
+}
+
+.billing-input {
+    background: #FFFFFF;
+    border: 1px solid #4955F5;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    width:100%;
+}
+
+
+.billing-input:focus {
+    border: none;
+    outline: none;
+    border-bottom: 3px solid #47bb56;
+}
+
+.billing-input:focus:invalid {
+    border: none;
+    outline: none;
+    border-bottom: 3px solid #ED5B55;
+    display:inline;
+}
+
+#firstname-error-message, #lastname-error-message, #email-error-message {
+    color: #ED5B55;
+    font-size:10px;
+    margin-bottom:5px;
+}
+
+#row1, #row2, #row3 {
+    visibility: hidden;
+}
+
+.th {
+    display: none;
+    color: #4955F5;
+}
+
+.summary{
+    width:100%;
+   
+}
+
+.summary-sm {
+    display: none;
+}
+
+.price {
+    color: #4955F5;
+}
+
+.billing-update {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #4955F5;
+}
+
+.btn-checkout {
+    color:#FFFFFF;
+    height: 40px;
+    background: #4955F5;
+    border-radius: 50px;
+    text-align:center;
+    width:40%;
+    display:block;
+    margin: 0 auto;
+    border:none;
+    outline:none;
+}
+
+.btn-checkout:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.btn-reset {
+    border: none;
+    color: #4955F5;
+    background: none;
+    margin: 0 auto;
+    outline: none;
+    display: block;
+    margin-top:10px;
+}
+
+.btn-reset:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.row{
+    content:"";
+    clear:both;
+    
+}
+
+.col-1-of-2 {
+    float:left;
+    width:50%;
+}
+
+.vector {
+    border: 1px solid #4955F5;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.bottle {
+    display: block;
+    margin: auto;
+    width: 50%;
+    margin-top: 10px;
+}
+
+.pack-quantity {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: #4955F5;
+    text-align:center;
+
+}
+
+#total6, #total12, #total24{
+    float:right;
+}
+
+h2 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #4955F5;
+    margin: 10px 0px;
+}
+
+.popup-modal {
+    display: none;
+    position: fixed;
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background: rgba(73, 85, 245, 0.8);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    height: 40%;
+    border-radius:15px;
+}
+
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.bill {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    color: #ED5B55;
+}
+
+
+
+@media only screen and (max-width: 320px) {
+
+    .primary-header {
+        font-size: 50px;
+    }
+
+    .card-row {
+        flex-direction:column;    
+       
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .row .col-1-of-2 {
+        display: table;
+        width: 100%;
+        float: none;
+    }
+
+    #img {
+        display: table-footer-group;
+    }
+
+    #form {
+        display: table-header-group;
+    }
+
+    .billing-update {
+        display: table-cell;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+
+    .woman-img {
+        width: 100%;
+    }
+
+    .summary-sm{
+        display:inline;
+    }
+
+    .summary-bg{
+        display:none;
+    }
+    
+}
